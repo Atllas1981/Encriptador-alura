@@ -1,24 +1,27 @@
+/* Estilos generales */
 * {
     background: #F3F5FC;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 32px;
     font-weight: 400;
     line-height: 150%;
 }
 
+/* Logo */
 .logo {
     width: 120px;
     height: 48px;
     gap: 0px;
-    opacity: 0px;
+    opacity: 1; 
 }
 
+/* Main */
 main {
     display: flex;
-    margin-bottom: 50px;
-    margin-left: 80px;
+    margin: 0 0 50px 80px;
 }
 
+/* Área de texto */
 .text-area {
     border: none;
     color: #0A3871;
@@ -26,7 +29,7 @@ main {
     text-transform: lowercase;
 }
 
-::placeholder {
+.text-area::placeholder {
     color: #0A3871;
 }
 
@@ -34,6 +37,7 @@ main {
     outline: none;
 }
 
+/* Información adicional */
 .informacion {
     width: 250px;
     height: 25px;
@@ -41,8 +45,7 @@ main {
     line-height: 18px;
 }
 
-/* Mensaje respuesta */
-
+/* Contenedor de mensaje */
 .container {
     position: relative;
     width: 400px;
@@ -51,99 +54,88 @@ main {
     box-sizing: border-box;
 }
 
+/* Mensaje */
 .mensaje {
     background: white;
     width: 100%;
     height: 100%;
     border-radius: 32px;
-    opacity: 0.8; /* Ajusta la opacidad para hacer visible el textarea y el fondo */
+    opacity: 0.8;
+    padding: 20px;
     box-sizing: border-box;
-    position: absolute; /* Para que ocupe toda la sección */
+    position: absolute;
     top: 0;
     left: 0;
-    padding: 20px; /* Ajuste opcional para contenido dentro del textarea */
-    z-index: 1; /* Asegura que el textarea esté debajo de la imagen */
+    z-index: 1;
 }
 
+/* Contenedor de imagen */
 .imagen-container {
     position: absolute;
     width: 336px;
     height: 304px;
     top: 283px;
-    left: 32px; /* Ajuste relativo al contenedor principal */
-    z-index: 2; /* Asegura que la imagen esté sobre el textarea */
+    left: 32px;
+    z-index: 2;
 }
 
 .imagen-container img {
     width: 100%;
     height: 100%;
-    border-radius: 32px 0px 0px 0px; /* Ajusta las esquinas redondeadas */
-    opacity: 1; /* Asegura que la imagen sea completamente visible */
+    border-radius: 32px 0 0 0;
 }
 
+/* Contenedor de texto */
 .texto-contenedor {
     position: absolute;
     width: 336px;
-    height: auto; /* Ajuste de altura para contenido de texto */
     top: 619px;
-    left: 32px; /* Ajuste relativo al contenedor principal */
-    z-index: 2; /* Asegura que el contenedor de texto esté sobre el textarea */
-    margin-top: 32px; /* Espacio de 32px debajo de la imagen */
-    opacity: 0.8; /* Ajusta la opacidad para hacer visible el texto */
+    left: 32px;
+    z-index: 2;
+    margin-top: 32px;
+    opacity: 0.8;
 }
 
-.texto-contenedor h6 {
+.texto-contenedor h6, .texto-contenedor p {
     margin: 0;
-    padding: 10px; /* Añadir un poco de padding para el texto */
+    padding: 10px;
 }
 
 .texto-contenedor p {
-    margin: 0;
     font-size: 20px;
-    padding: 10px; /* Añadir un poco de padding para el texto */
 }
 
-
-.mensaje:focus {
-    outline: none;
-}
-
+/* Botones */
 .botones {
     display: flex;
     margin-top: 18px;
 }
 
-.btn-desencriptar{
-    background: #D8DFE8;
+.btn-desencriptar, .btn-encriptar, .copiar {
     border: 1px solid #0A3871;
     border-radius: 24px;
-    color: #0A3871;
     cursor: pointer;
     height: 67px;
-    margin-left: 30px;
     width: 328px;
 }
 
-.btn-encriptar{
+.btn-desencriptar {
+    background: #D8DFE8;
+    color: #0A3871;
+    margin-left: 30px;
+}
+
+.btn-encriptar {
     background: #0A3871;
-    border: 1px solid #0A3871;
-    border-radius: 24px;
     color: white;
-    cursor: pointer;
-    height: 67px;
-    width: 328px;
 }
 
 .copiar {
-    display: none; /* Inicialmente oculto */
-    border: 1px solid #0A3871;
-    border-radius: 24px;
+    display: none;
     color: #0A3871;
-    cursor: pointer;
-    height: 67px;
     width: 336px;
     position: absolute;
-    bottom: 20px; /* Ajusta la posición del botón dentro del contenedor */
+    bottom: 20px;
     left: 32px;
-    z-index: 3; /* Asegura que el botón esté sobre otros elementos */
+    z-index: 3;
 }
